@@ -27,8 +27,8 @@ const init = {
     asd: 'asd',
     src: 'https://sun9-10.userapi.com/impf/c840425/v840425151/26b12/waIg4Znt2Ug.jpg?size=200x0&quality=90&crop=0,0,512,512&sign=00b777bffa8aae15019d18f2e021bb3e&ava=1',
     any_any: 0,
-    countElementsOnPage: 3,
-    counElementInOneElementPaginator: 1
+    countElementsOnPage: 6,
+    counElementInOneElementPaginator: 2
 }
 
 export const oneReduser = (state = init, action) => {
