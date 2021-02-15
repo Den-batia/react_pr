@@ -1,8 +1,6 @@
 import React from 'react'
-import { Route } from 'react-router-dom';
-import FirstComponent from "./comp/FirstComponent/FirstComponent"
-import Login from "./comp/Login/Login"
 import {connect} from 'react-redux'
+import MainComponent from './comp/MainConponent/MainComponent';
 // import store from './redax/m_redux';
 
 
@@ -32,9 +30,7 @@ asd = async ()=> {
   render() {
     if (this.state.isTimeEnded) {
       return <div >
-        
-        <Route exact component={FirstComponent} path="/" />
-        <Route component={Login} path="/login" />
+        <MainComponent/>
       </div>
     }
     return <div>
