@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import MainComponent from './comp/MainConponent/MainComponent';
+import TopComponent from './comp/TopComponent/TopComponent';
 // import store from './redax/m_redux';
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ asd = async ()=> {
   render() {
     if (this.state.isTimeEnded) {
       return <div >
+        <TopComponent/>
         <MainComponent/>
       </div>
     }

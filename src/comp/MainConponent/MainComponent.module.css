@@ -8,12 +8,6 @@
     /* margin-top: 30px; */
     /* margin-bottom: 30px; */
     background-color: #4d669c69;
-  }
-
-  .ikon:after{
-    background-image: url('../../assets/images/like.svg');
-    right: 3px;
-    left: auto;
-    background-position: center center;
+    margin-top: 30px;
   }
 
