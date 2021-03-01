@@ -1,0 +1,25 @@
+
+.a{
+    /* padding: 0 2rem; */
+    color: hotpink;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.a:hover {
+    background:rgb(73, 64, 116);
+    color: red;
+    cursor: pointer;
+}
+
+li{
+    list-style-type: none;
+    display: flex;
+    flex-flow: column wrap;
+}
+ul{
+    margin-bottom: 0;
+    
+}

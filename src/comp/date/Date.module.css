@@ -1,14 +1,9 @@
 .a {
-    /* height: 50px; */
-    
-    border-radius: 10px;
-    background-color: #7969ff5e;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px; 
-    margin-bottom: 30px;
-    font-size: 20px;
-    /* padding: 20px; */
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    /* color: black */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }

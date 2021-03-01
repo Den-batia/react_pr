@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import MainComponent from './comp/MainConponent/MainComponent';
+import StyledMenuComponent from './comp/StyledMenuComponent/StyledMenuComponent';
 import TopComponent from './comp/TopComponent/TopComponent';
 // import store from './redax/m_redux';
 
@@ -20,15 +21,18 @@ asd = async ()=> {
     this.asd()
   }
   render() {
-    if (this.state.isTimeEnded) {
-      return <div >
-        <TopComponent/>
-        <MainComponent/>
+    
+    
+    return (
+      <div >
+        <TopComponent />
+        {this.state.isTimeEnded && <div style={{marginTop:"53px"}}><MainComponent /></div>} 
+        {this.state.isTimeEnded || <div style={{marginTop:"53px"}}>ждем...</div>}
+        
+        
       </div>
-    }
-    return <div>
-      ждем....
-    </div>
+    )
+    
   }
 }
 
