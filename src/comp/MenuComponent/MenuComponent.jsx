@@ -1,36 +1,13 @@
 import React, { useState } from 'react'
 import StyledMenuComponent from '../StyledMenuComponent/StyledMenuComponent';
-import s from './MenuComponent.module.css'
 
-const MenuComponent = () => {
-
-    const [open, setOpen] = useState(true);
+const MenuComponent = (props) => {
     
+    const [open, setOpen] = useState(true);
     return(
-        <div>
-            {open && <div>
-                        <div className={s.asd}>
-                            <button className={s.b} onClick={()=>{setOpen(false)}}>
-                                <div className={s.div} />
-                                <div className={s.div} />
-                                <div className={s.div} />
-                            </button>
-                        </div> 
-                    </div>
+        <div style = {open ? {transition:"transform .2s ease 0s", transform: "translateX(200px)"} : {transition:"transform .2s ease 0s", transform: "translateX(0)"}}>
+            <StyledMenuComponent assd={()=>{setOpen(!open); props.touhGamMenuAction(!props.touh_Gam_menu)}} />
             
-            }
-        
-            {open || <div>
-                        <StyledMenuComponent st={open ? s.nav : s.nav1} assd={()=>{setOpen(true)}}/>
-                        <div className = {s.asd}>
-                            <button className = {s.b} onClick={()=>{setOpen(true)}}>
-                                <div className={s.div} />
-                                <div className={s.div} />
-                                <div className={s.div} />
-                            </button>
-                        </div>
-                    </div>
-        }
         </div>
         
     )

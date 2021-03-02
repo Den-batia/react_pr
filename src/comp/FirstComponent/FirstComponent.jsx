@@ -4,7 +4,7 @@ import WithPropsPaginator from "../Paginator/Paginator"
 import s from './FirstComponent.module.css'
 
 
-const FirstComponent = (props) => {
+const FirstComponent = () => {
   return <WithPropsPaginator/>
   
 }

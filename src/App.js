@@ -1,8 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import MainComponent from './comp/MainConponent/MainComponent';
-import StyledMenuComponent from './comp/StyledMenuComponent/StyledMenuComponent';
 import TopComponent from './comp/TopComponent/TopComponent';
+import {touhGamMenuAction} from './redax/one-reduser'
 // import store from './redax/m_redux';
 
 class App extends React.Component {
@@ -24,10 +24,14 @@ asd = async ()=> {
     
     
     return (
-      <div >
-        <TopComponent />
-        {this.state.isTimeEnded && <div style={{marginTop:"53px"}}><MainComponent /></div>} 
-        {this.state.isTimeEnded || <div style={{marginTop:"53px"}}>ждем...</div>}
+      <div>
+        <TopComponent {...this.props}/>
+        <div style={this.props.touh_Gam_menu ? {marginTop:"53px",  opacity:'0.5'} : {marginTop:"53px"}}>
+          {this.state.isTimeEnded && <div ><MainComponent/></div>} 
+          {this.state.isTimeEnded || <div style={{marginTop:"53px"}}>ждем...</div>}
+        </div>
+        
+        
         
         
       </div>
@@ -38,7 +42,9 @@ asd = async ()=> {
 
 let mapStateToProps = (state) => {
   return {
-      any: state.one.any_any
+      any: state.one.any_any,
+      touh_Gam_menu: state.one.touh_Gam_menu
   }
 }
-export default connect(mapStateToProps, null)(App);
+
+export default connect(mapStateToProps, {touhGamMenuAction})(App);

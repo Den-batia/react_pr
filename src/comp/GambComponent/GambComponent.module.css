@@ -1,0 +1,27 @@
+.asd{
+    top: 0;
+    float:right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding:  10px;
+}
+.b {
+    height: 2rem;
+    background: transparent;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+}
+.div{
+    position: relative;
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 10px;
+    background-color: rgb(112, 105, 105);
+}

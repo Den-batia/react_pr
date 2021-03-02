@@ -1,15 +1,14 @@
+
 import s from './TopComponent.module.css'
 import DateComponent from '../date/Date'
-import  MenuComponent from '../MenuComponent/MenuComponent'
+import MenuComponent from '../MenuComponent/MenuComponent'
 
-const TopComponent = () => {
+const TopComponent = (props) => {
     return (
         <div className={s.navbar}>
-            <MenuComponent />
             <DateComponent/>
-
+            <MenuComponent {...props}/>
         </div>
-
     )
 }
 

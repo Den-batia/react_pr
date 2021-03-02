@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const MainComponent = (props) => {
     return(
         <div className={s.grid}>
-            <Route exact component={FirstComponent} path="/" />
+            <Route exact component={FirstComponent} path="/"/>
             <Route component={Login} path="/login" />
 
         </div>
