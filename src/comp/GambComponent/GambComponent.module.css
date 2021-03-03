@@ -20,8 +20,20 @@
 }
 .div{
     position: relative;
-    width: 2rem;
+    width: 30px;
     height: 0.25rem;
     border-radius: 10px;
     background-color: rgb(112, 105, 105);
+    padding: 0;
+}
+
+.cli{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    /* left: -300px; */
+    background-color: rgb(112, 105, 105);
+    padding: 0;
+    background-image: url('../../assets/images/close.svg');
+    /* background-size: 16px 16px; */
 }

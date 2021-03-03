@@ -34,7 +34,7 @@ ul{
     width: 270px;
     width: calc(100% - 50px);
     max-width: 200px;
-    height: 500px;
+    height: 1000px;
     top: 0;
     right: 0;
     position: fixed;
@@ -56,8 +56,8 @@ ul{
 .aaa{
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 60px;
+    top: 53px;
+    /* bottom: 60px; */
     position: absolute;
     overflow-x: hidden;
     overflow-y: auto;

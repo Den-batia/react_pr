@@ -26,14 +26,10 @@ asd = async ()=> {
     return (
       <div>
         <TopComponent {...this.props}/>
-        <div style={this.props.touh_Gam_menu ? {marginTop:"53px",  opacity:'0.5'} : {marginTop:"53px"}}>
+        <div style={this.props.touh_Gam_menu ? {opacity:'0.5'} : {overflow:'hidden'}}>
           {this.state.isTimeEnded && <div ><MainComponent/></div>} 
-          {this.state.isTimeEnded || <div style={{marginTop:"53px"}}>ждем...</div>}
+          {this.state.isTimeEnded || <div style={{marginTop:'53px'}}>ждем...</div>}
         </div>
-        
-        
-        
-        
       </div>
     )
     
