@@ -9,17 +9,17 @@ class App extends React.Component {
   state ={
     isTimeEnded: false
   }
-asd = async ()=> {
-  let a =  new Promise((res, rej) => {setTimeout(()=>{res()}, 1000)})
-  await a
-  this.setState({isTimeEnded:true})
-}
-  componentDidMount = ()=>{
+// asd = async ()=> {
+//   let a =  new Promise((res, rej) => {setTimeout(()=>{res()}, 1000)})
+//   await a
+//   this.setState({isTimeEnded:true})
+// }
+  // componentDidMount = ()=>{
     // setInterval(() => {
     //   store.dispatch({type:'CHANGE-ANY'})
     // }, 1000);
-    this.asd()
-  }
+  //   this.asd()
+  // }
   render() {
     
     
@@ -27,8 +27,8 @@ asd = async ()=> {
       <div>
         <TopComponent {...this.props}/>
         <div style={this.props.touh_Gam_menu ? {opacity:'0.5'} : {overflow:'hidden'}}>
-          {this.state.isTimeEnded && <div ><MainComponent/></div>} 
-          {this.state.isTimeEnded || <div style={{marginTop:'53px'}}>ждем...</div>}
+          <MainComponent/>
+          {/* {this.state.isTimeEnded || <div style={{marginTop:'53px'}}>ждем...</div>} */}
         </div>
       </div>
     )

@@ -1,11 +1,12 @@
 import React from "react"
-import { NavLink } from "react-router-dom"
+import ContentComonent from "../ContentComonent/ContentComonent"
 import WithPropsPaginator from "../Paginator/Paginator"
-import s from './FirstComponent.module.css'
+
 
 
 const FirstComponent = () => {
-  return <WithPropsPaginator/>
+  // return <WithPropsPaginator/>
+  return <ContentComonent/>
   
 }
 
