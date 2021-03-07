@@ -1,11 +1,12 @@
 .a {
     background-color:#f7f7f9;
     text-align: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* font-size: 20pt; */
     padding: 25px;
     height:auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    margin-top: 20px;
 
 
 }

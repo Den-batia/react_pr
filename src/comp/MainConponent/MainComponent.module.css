@@ -1,7 +1,7 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    /* background-color: #4d669c69; */
+    background-color: #4d669c69;
     position: relative;
     z-index: 10;
     margin-top: 53px;
