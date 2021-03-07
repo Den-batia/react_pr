@@ -12,6 +12,8 @@ let Textarea = (props) => {
                             alt={'ddddd'}>
                 </LazyLoadImage>
             </NavLink>
+            <div className={s.like}></div>
+            <div className={s.dislike}></div>
            
         </div>
     )

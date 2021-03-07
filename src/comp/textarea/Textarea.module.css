@@ -33,3 +33,20 @@
     display: block;
     background-size: cover;
 }
+.like{
+    margin-top: 20px;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-image: url('../../assets/images/like.svg');
+    left: 30%;
+}
+.dislike{
+    position: relative;
+    float: right;
+    width: 14px;
+    height: 14px;
+    background-image: url('../../assets/images/dislike.svg');
+    right: 30%;
+    bottom: 14px
+}
