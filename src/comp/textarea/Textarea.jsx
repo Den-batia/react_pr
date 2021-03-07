@@ -1,13 +1,22 @@
 import s from './Textarea.module.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 let Textarea = (props) => {
-
     return (
+
         <div className={s.a} onClick={() => props.dellElement()}>
-            <img/>
-            {/* <p className={s.text}>
-                    В магазине электроники блондинка - менеджеру по продажам: "Я хочу купить этот телевизор". Ответ: "Мне очень жаль, но блондинкам мы не продаем". Назавтра в магазин являетсята же девушка, но с перекрашенными волосами. "Мне нужен этот телевизор", - говорит она продавцу. Он: "Блондинкам не продаем". Она: "Но как вы узнали, что я - блондинка?" Он: "Очень просто: это не телевизор, а микроволновка".
-            </p> */}
+            <div className={s.img}>
+                <LazyLoadImage  src={props.data.news_img_link}
+                                alt={'hhhhhhhhhhhhhh'}
+                                width='100%'
+                                height={230}
+                                            >
+                                
+                </LazyLoadImage>
+            </div>
+            
+            {/* <img src={props.data.news_img_link}></img> */}
+            
         </div>
     )
 }

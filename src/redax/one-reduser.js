@@ -31,18 +31,18 @@ const updateDataNews = (data) => ({type: actionsTypes.update_dataNews, data})
 // }
 export const loadNextNewsThunk = () => {
     return async dispatch => {
-        dispatch(is_loadinDataAction(true))
+        // dispatch(is_loadinDataAction(true))
         let a = await api.getNextNews()
-        console.log(a.data)
         dispatch(updateDataNews(a.data))
-        dispatch(is_loadinDataAction(false))
+        // dispatch(is_loadinDataAction(false))
 
     }
 } 
 
 
 const init = {
-    array: [],
+    array: [{'news_img_link': "https://content.onliner.by/news/550x298/118c7d8800558a0660f2d02c15517019.jpeg"}, {'news_img_link': "https://content.onliner.by/news/550x298/118c7d8800558a0660f2d02c15517019.jpeg"}, 
+            {'news_img_link': "https://content.onliner.by/news/550x298/118c7d8800558a0660f2d02c15517019.jpeg"}, {'news_img_link': "https://content.onliner.by/news/550x298/118c7d8800558a0660f2d02c15517019.jpeg"}, ],
     is_loadinData: false,
     countElementsOnPage: 20,
     counElementInOneElementPaginator: 1,

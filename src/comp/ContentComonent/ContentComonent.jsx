@@ -11,19 +11,19 @@ class ContentComonent extends react.Component{
         this.props.loadNextNewsThunk()
     }
 
-    componentDidMount = ()=>{
-        this.props.loadNextNewsThunk()
-    }
+    // componentDidMount(){
+    //     this.props.loadNextNewsThunk()
+    // }
 
     render(){
         return(
             <>
                 <InfiniteScroll
-                    dataLength={this.props.array.length+1}
+                    dataLength={this.props.array.length}
                     next={this.fetchMoreData}
                     hasMore={true}
                     loader={<h4>Loading...</h4>}>
-                        {this.props.array.map((i, index) => (<Textarea/>))}
+                        {this.props.array.map((i, index) => (<Textarea key={index} data={i}/>))}
                 </InfiniteScroll>
                 <button onClick={()=>{this.props.loadNextNewsThunk()}}>aaaaaaaaaaaaaaaaa</button>
             </>

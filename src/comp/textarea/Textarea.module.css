@@ -1,11 +1,9 @@
 .a {
-    padding-top: 10px;
-    background-color:#7969ff5e;
-    padding-left: 25px;
-    padding-right: 25px;
+    background-color:#f7f7f9;
     text-align: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* font-size: 20pt; */
+    height: 250px;
 
 
 }
@@ -23,4 +21,11 @@
 .text{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px
+}
+.img{
+    /* width: 99vw;
+    height: 99vh; */
+    padding: 20px;
+    /* border-radius: 10px; */
+    display: block;
 }
