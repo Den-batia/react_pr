@@ -5,18 +5,11 @@ let Textarea = (props) => {
     return (
 
         <div className={s.a} onClick={() => props.dellElement()}>
-            <div className={s.img}>
-                <LazyLoadImage  src={props.data.news_img_link}
-                                alt={'hhhhhhhhhhhhhh'}
-                                width='100%'
-                                height={230}
-                                            >
+            <div className={s.text}>{props.data.news_text}</div>
+            <LazyLoadImage className={s.img}  src={props.data.news_img_link}
+                        alt={'ddddd'}>
                                 
-                </LazyLoadImage>
-            </div>
-            
-            {/* <img src={props.data.news_img_link}></img> */}
-            
+            </LazyLoadImage>
         </div>
     )
 }

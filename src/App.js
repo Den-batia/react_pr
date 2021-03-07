@@ -1,46 +1,43 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
 import MainComponent from './comp/MainConponent/MainComponent';
 import TopComponent from './comp/TopComponent/TopComponent';
-import {touhGamMenuAction} from './redax/one-reduser'
-// import store from './redax/m_redux';
+import { touhGamMenuAction, loadInitDataThunk } from './redax/one-reduser'
 
-class App extends React.Component {
-  state ={
-    isTimeEnded: false
+class App extends React.Component{
+
+  componentDidMount(){
+    // this.props.loadInitDataThunk()
   }
 // asd = async ()=> {
 //   let a =  new Promise((res, rej) => {setTimeout(()=>{res()}, 1000)})
 //   await a
 //   this.setState({isTimeEnded:true})
 // }
-  // componentDidMount = ()=>{
-    // setInterval(() => {
-    //   store.dispatch({type:'CHANGE-ANY'})
-    // }, 1000);
-  //   this.asd()
-  // }
-  render() {
-    
-    
-    return (
+    render(){
+      return (
       <div>
         <TopComponent {...this.props}/>
-        <div style={this.props.touh_Gam_menu ? {opacity:'0.5'} : {overflow:'hidden'}}>
-          <MainComponent/>
-          {/* {this.state.isTimeEnded || <div style={{marginTop:'53px'}}>ждем...</div>} */}
-        </div>
+        {this.props.is_loadinInitData && <div style={{marginTop:'53px'}}>init</div>}
+        {this.props.is_loadinInitData || 
+        <>
+          <div style={this.props.touh_Gam_menu ? {opacity:'0.5'} : {overflow:'hidden'}}>
+            <MainComponent/>
+          </div>
+        </>
+        }
       </div>
     )
+    }
     
-  }
 }
 
 let mapStateToProps = (state) => {
   return {
-      any: state.one.any_any,
+
+      is_loadinInitData: state.one.is_loadinInitData,
       touh_Gam_menu: state.one.touh_Gam_menu
   }
 }
 
-export default connect(mapStateToProps, {touhGamMenuAction})(App);
+export default connect(mapStateToProps, {touhGamMenuAction, loadInitDataThunk})(App);
