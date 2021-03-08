@@ -6,33 +6,23 @@ import { touhGamMenuAction, null_array } from './redax/one-reduser'
 
 class App extends React.Component{
 
-  // componentDidMount(){
-  //   this.props.loadInitDataThunk()
-  // }
-// asd = async ()=> {
-//   let a =  new Promise((res, rej) => {setTimeout(()=>{res()}, 1000)})
-//   await a
-//   this.setState({isTimeEnded:true})
-// }
     render(){
       return (
       <div>
         <TopComponent {...this.props}/>
         <>
           <div style={this.props.touh_Gam_menu ? {opacity:'0.5'} : {overflow:'hidden'}}>
-            <MainComponent/>
+            <MainComponent />
           </div>
         </>
         
-      </div>
-    )
+      </div>)
     }
     
 }
 
 let mapStateToProps = (state) => {
   return {
-      is_loadinInitData: state.one.is_loadinInitData,
       touh_Gam_menu: state.one.touh_Gam_menu
   }
 }

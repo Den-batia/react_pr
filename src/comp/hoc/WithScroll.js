@@ -1,36 +1,34 @@
-import { useEffect } from "react";
+import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Textarea from '../textarea/Textarea'
 
 const withScroll = () => {
 
-    const ScrollComponent = (props) => {
+    class ScrollComponent extends React.Component{
 
-        useEffect(()=>{
-            props.loadInitDataThunk(props.json_url)
-        }, [])
-
-        const fetchMoreData = ()=> {
-            props.loadNextNewsThunk(props.json_url)
+        fetchMoreData = ()=> {
+            this.props.loadNextNewsThunk(this.props.json_url)
         }
 
-        return (
-            <>
-            {props.is_loadinInitData && <div style={{marginTop:'53px'}}>init</div>}
+        componentDidMount(){
+            this.props.loadInitDataThunk(this.props.json_url)
+        }
+        render(){
+            return (
+                <>
+                {this.props.is_loadinInitData && <div>init</div>}
 
-            {props.is_loadinInitData || 
-                <InfiniteScroll
-                    dataLength={props.array.length}
-                    next={fetchMoreData}
-                    hasMore={true}
-                    loader={<h4>Loading...</h4>}>
-                        {props.array.map((i, index) => (<Textarea key={index} data={i}/>))}
-                </InfiniteScroll>
-            }
-            </>
-            
-        )
-    
+                {this.props.is_loadinInitData || 
+                    <InfiniteScroll
+                        dataLength={this.props.array.length}
+                        next={this.fetchMoreData}
+                        hasMore={true}
+                        loader={<h4>Loading...</h4>}>
+                            {this.props.array.map((i, index) => (<Textarea key={index} data={i}/>))}
+                    </InfiniteScroll>
+                }
+                </>)
+        }
     }
     return ScrollComponent
 }
