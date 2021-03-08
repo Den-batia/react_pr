@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 import MainComponent from './comp/MainConponent/MainComponent';
 import TopComponent from './comp/TopComponent/TopComponent';
-import { touhGamMenuAction, loadInitDataThunk } from './redax/one-reduser'
+import { touhGamMenuAction, null_array } from './redax/one-reduser'
 
 class App extends React.Component{
 
-  componentDidMount(){
-    // this.props.loadInitDataThunk()
-  }
+  // componentDidMount(){
+  //   this.props.loadInitDataThunk()
+  // }
 // asd = async ()=> {
 //   let a =  new Promise((res, rej) => {setTimeout(()=>{res()}, 1000)})
 //   await a
@@ -18,14 +18,12 @@ class App extends React.Component{
       return (
       <div>
         <TopComponent {...this.props}/>
-        {this.props.is_loadinInitData && <div style={{marginTop:'53px'}}>init</div>}
-        {this.props.is_loadinInitData || 
         <>
           <div style={this.props.touh_Gam_menu ? {opacity:'0.5'} : {overflow:'hidden'}}>
             <MainComponent/>
           </div>
         </>
-        }
+        
       </div>
     )
     }
@@ -34,10 +32,9 @@ class App extends React.Component{
 
 let mapStateToProps = (state) => {
   return {
-
       is_loadinInitData: state.one.is_loadinInitData,
       touh_Gam_menu: state.one.touh_Gam_menu
   }
 }
 
-export default connect(mapStateToProps, {touhGamMenuAction, loadInitDataThunk})(App);
+export default connect(mapStateToProps, {touhGamMenuAction, null_array})(App);

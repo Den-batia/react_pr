@@ -5,8 +5,8 @@ import withScroll from '../hoc/WithScroll'
 
 const mapStateToProps = (state) => {
     return {
+        json_url: '/people/',
         array: state.one.array,
-        is_loadinData: state.one.is_loadinData,
         is_loadinInitData: state.one.is_loadinInitData
     }
   }

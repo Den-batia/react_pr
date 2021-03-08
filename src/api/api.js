@@ -10,8 +10,9 @@ class Api {
         })
         
     }
-    getNextNews(){
-        return this.instanseAPI.get('/news/')
+    getNextNews(url){
+        const a = 'news' + url
+        return this.instanseAPI.get(a)
     }
 }
 
