@@ -14,6 +14,7 @@ let Textarea = (props) => {
             </NavLink>
             <div className={s.like}></div>
             <div className={s.dislike}></div>
+            {props.data.news_tag && <div>{props.data.news_tag.tag_name}</div>}
            
         </div>
     )

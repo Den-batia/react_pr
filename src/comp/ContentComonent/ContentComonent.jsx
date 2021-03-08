@@ -1,7 +1,6 @@
 import react from 'react'
 import InfiniteScroll from "react-infinite-scroll-component";
 import { connect } from 'react-redux';
-import s from './ContentComonent.module.css'
 import { loadNextNewsThunk } from '../../redax/one-reduser'
 import Textarea from '../textarea/Textarea';
 
@@ -10,10 +9,6 @@ class ContentComonent extends react.Component{
     fetchMoreData = ()=> {
         this.props.loadNextNewsThunk()
     }
-
-    // componentDidMount(){
-    //     this.props.loadNextNewsThunk()
-    // }
 
     render(){
         return(
@@ -25,7 +20,6 @@ class ContentComonent extends react.Component{
                     loader={<h4>Loading...</h4>}>
                         {this.props.array.map((i, index) => (<Textarea key={index} data={i}/>))}
                 </InfiniteScroll>
-                <button onClick={()=>{this.props.loadNextNewsThunk()}}>aaaaaaaaaaaaaaaaa</button>
             </>
         )
     }
