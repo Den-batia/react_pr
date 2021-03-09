@@ -4,7 +4,7 @@ import withScroll from '../hoc/WithScroll'
 
 const mapStateToProps = () => {
     return {
-        json_url: '/people/',
+        json_url: '/tech/',
     }
   }
 

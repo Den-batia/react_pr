@@ -1,14 +1,10 @@
-
 import { connect } from 'react-redux';
-import { loadNextNewsThunk, loadInitDataThunk } from '../../redax/one-reduser'
 import withScroll from '../hoc/WithScroll'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = () => {
     return {
-        array: state.one.array,
-        is_loadinData: state.one.is_loadinData,
-        is_loadinInitData: state.one.is_loadinInitData
+      json_url: '/',
     }
   }
 
-export default connect(mapStateToProps, {loadNextNewsThunk, loadInitDataThunk})(withScroll())
+export default connect(mapStateToProps, {})(withScroll())
