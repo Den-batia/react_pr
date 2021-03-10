@@ -25,6 +25,11 @@ const withScroll = () => {
         componentDidMount(){
             this.props.loadInitDataThunk(this.props.json_url)
         }
+
+        componentDidUpdate(){
+            this.props.array.length===0 && this.props.loadInitDataThunk(this.props.json_url)
+        }
+
         render(){
             return (
                 <>
