@@ -23,7 +23,8 @@ class App extends React.Component{
 
 let mapStateToProps = (state) => {
   return {
-      touh_Gam_menu: state.one.touh_Gam_menu
+      touh_Gam_menu: state.one.touh_Gam_menu,
+      tag: state.one.tag
   }
 }
 

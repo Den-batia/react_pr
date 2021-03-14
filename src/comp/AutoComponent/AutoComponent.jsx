@@ -4,6 +4,7 @@ import withScroll from '../hoc/WithScroll'
 const mapStateToProps = () => {
     return {
         json_url: '/auto/',
+        tag: 'Авто'
     }
   }
 

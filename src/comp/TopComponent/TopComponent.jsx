@@ -7,6 +7,7 @@ const TopComponent = (props) => {
     return (
         <div className={s.navbar}>
             <DateComponent/>
+            <div className={s.tag}>{props.tag}</div>
             <MenuComponent {...props}/>
         </div>
     )

@@ -7,7 +7,7 @@ const GambComponent = (props) => {
 
     return (
         <div className={s.asd}>
-            <button className={s.b} onClick={props.assd}>
+            <button className={s.b} onClick={props.callBody}>
                 {props.is_open ? a : b}
             </button>
         </div> 

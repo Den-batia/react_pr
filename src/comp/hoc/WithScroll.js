@@ -2,7 +2,7 @@ import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { connect } from "react-redux";
 import Textarea from '../textarea/Textarea'
-import { loadNextNewsThunk, loadInitDataThunk } from '../../redax/one-reduser' 
+import { loadNextNewsThunk, loadInitDataThunk, updateTag } from '../../redax/one-reduser' 
 
 const withScroll = () => {
 
@@ -11,7 +11,7 @@ const withScroll = () => {
         return{
             array: state.one.array,
             is_loadinInitData: state.one.is_loadinInitData,
-            num_load: state.one.num_load
+            num_load: state.one.num_load,
         }
     }
 
@@ -24,10 +24,19 @@ const withScroll = () => {
 
         componentDidMount(){
             this.props.loadInitDataThunk(this.props.json_url)
+            // this.props.updateTag(this.props.tag)
         }
 
-        componentDidUpdate(){
-            this.props.array.length===0 && this.props.loadInitDataThunk(this.props.json_url)
+        componentDidUpdate(prevprops){
+            if(this.props.array.length===0){
+                this.props.loadInitDataThunk(this.props.json_url)
+            }
+            // this.props.array.length===0 && this.props.loadInitDataThunk(this.props.json_url)
+            this.props.tag !== prevprops.tag || this.props.updateTag(this.props.tag)
+            // if(this.props.tag !== prevprops.tag){
+            //     console.log('tag')
+            //     this.props.updateTag(this.props.tag)
+            // }
         }
 
         render(){
@@ -47,7 +56,7 @@ const withScroll = () => {
                 </>)
         }
     }
-    return connect(mapStateToProps, {loadNextNewsThunk, loadInitDataThunk})(ScrollComponent)
+    return connect(mapStateToProps, {loadNextNewsThunk, loadInitDataThunk, updateTag})(ScrollComponent)
 }
 
 export default withScroll

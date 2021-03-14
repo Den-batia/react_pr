@@ -17,7 +17,6 @@ const MainComponent = (props) => {
             <Route exact component = {RealtComponent} path="/realt"/>
             <Route exact component = {AutoComponent} path="/auto"/>
             <Route component={Login} path="/login" />
-
         </div>
     )
 }

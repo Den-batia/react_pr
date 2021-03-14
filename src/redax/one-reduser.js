@@ -8,10 +8,12 @@ const actionsTypes = {
     touh_Gam_menu: 'TOUCH_GAM',
     is_loadingInitData: 'IS-LOAD-INIT-DATA',
     update_dataNews: 'UPDATE-DATA-NEWS',
-    cancel_array: 'DE-ARR'
+    cancel_array: 'DE-ARR',
+    update_tag: 'UPDATE-TAG'
 }
 
 export const dellElement = () => ({type: actionsTypes.dellElement})
+export const updateTag = (tag) => ({type: actionsTypes.update_tag, tag})
 
 export const login = ({text, text2}) =>{
     return dispatch => {
@@ -50,7 +52,8 @@ const init = {
     countElementsOnPage: 20,
     counElementInOneElementPaginator: 1,
     touh_Gam_menu: false,
-    num_load: 0
+    num_load: 0,
+    tag: '',
 }
 
 export const oneReduser = (state = init, action) => {
@@ -95,6 +98,13 @@ export const oneReduser = (state = init, action) => {
                 array:[],
                 is_loadinInitData: true,
                 num_load: 0
+            }
+        }
+
+        case actionsTypes.update_tag:{
+            return{
+                ...state,
+                tag: action.tag
             }
         }
         

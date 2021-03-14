@@ -5,6 +5,7 @@ let Textarea = (props) => {
     return (
 
         <div className={s.a} onClick={() => props.dellElement()}>
+            <div className = {s.date}>Сегодня</div>
             <div className={s.text}>{props.data.news_text}</div>
             <NavLink to={props.data.news_img_link}>
                  <LazyLoadImage className={s.img}

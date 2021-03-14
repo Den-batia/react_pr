@@ -17,8 +17,7 @@ const MenuComponent = ({touhGamMenuAction, touh_Gam_menu, null_array}) => {
 
     return(
         <div style = {open ? {transition:"transform .2s ease 0s", transform: "translateX(200px)"} : {transition:"transform .2s ease 0s", transform: "translateX(0)"}}>
-            <StyledMenuComponent assd={callBody} is_open={open} array_n={null_array}/>
-            
+            <StyledMenuComponent callBody={callBody} is_open={open} array_n={null_array}/>
         </div>
         
     )

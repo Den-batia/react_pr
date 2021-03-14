@@ -5,10 +5,10 @@ import GambComponent from '../GambComponent/GambComponent'
 
 const StyledMenuComponent = (props) => {
 
-    const del_array = () => {
-        props.assd()
+    const del_array = (e) => {
+        console.log(e.target.innerText)
+        props.callBody()
         props.array_n()
-
     }
 
     return(
@@ -17,7 +17,7 @@ const StyledMenuComponent = (props) => {
             <div style={{position:'absolute',  width: '0px'}}><GambComponent {...props}/></div>
             <div className = {s.dd}>
                 <ul className={s.aaa}>
-                    
+                    <li><NavLink className = {s.a} to={'/'} onClick={del_array}>Главная</NavLink></li>
                     <li><NavLink className = {s.a} to={'people'} onClick={del_array}>Люди</NavLink></li>
                     <li><NavLink className = {s.a} to={'auto'}  onClick={del_array}>Авто</NavLink></li>
                     <li><NavLink className = {s.a} to={'realt'} onClick={del_array}>Недвижимость</NavLink></li>

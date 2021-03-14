@@ -6,7 +6,7 @@
     padding: 15px;
     height:auto;
     /* border: 1px solid black; */
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
 
@@ -51,4 +51,21 @@
     background-image: url('../../assets/images/dislike.svg');
     right: 30%;
     bottom: 14px
+}
+
+.date{
+    position: relative;
+    float: right;
+    border-radius: 6px;
+    bottom: 24px;
+    right: 60px;
+    width: auto;
+    height: auto;
+    background-color: #f7f7f9;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
