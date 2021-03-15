@@ -24,19 +24,13 @@ const withScroll = () => {
 
         componentDidMount(){
             this.props.loadInitDataThunk(this.props.json_url)
-            // this.props.updateTag(this.props.tag)
         }
 
         componentDidUpdate(prevprops){
             if(this.props.array.length===0){
                 this.props.loadInitDataThunk(this.props.json_url)
             }
-            // this.props.array.length===0 && this.props.loadInitDataThunk(this.props.json_url)
             this.props.tag !== prevprops.tag || this.props.updateTag(this.props.tag)
-            // if(this.props.tag !== prevprops.tag){
-            //     console.log('tag')
-            //     this.props.updateTag(this.props.tag)
-            // }
         }
 
         render(){

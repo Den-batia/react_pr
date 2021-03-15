@@ -25,7 +25,13 @@
 
 .text{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 13px
+    font-size: 13px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
 }
 .img{
     width: 100%;
@@ -58,7 +64,7 @@
     float: right;
     border-radius: 6px;
     bottom: 24px;
-    right: 60px;
+    right: 10%;
     width: auto;
     height: auto;
     background-color: #f7f7f9;
@@ -68,4 +74,15 @@
     font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.comment{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    position: relative;
+    top: 10px;
+    bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: #d8d8d8; */
 }
