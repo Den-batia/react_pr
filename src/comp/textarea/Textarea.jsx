@@ -21,9 +21,12 @@ let Textarea = (props) => {
 
     return (
 
-        <div className={s.a} onClick={() => props.dellElement()}>
+        <div className={s.area} onClick={() => props.dellElement()}>
             <div className = {s.date}>{date(props.data.post_date)}</div>
-            <div className={s.text}>{props.data.news_text}</div>
+            <div className={s.text}>
+                <a className={s.a} href={props.data.news_link}>{props.data.news_text}</a>
+                
+            </div>
             
             <LazyLoadImage className={s.img}
                 src={props.data.news_img_link}
